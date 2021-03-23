@@ -28,6 +28,13 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- Calendly link widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+
+    <!-- Calendly link widget end -->
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -81,6 +88,7 @@
               >Interests</a
             >
           </li>
+
           <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
         </ul>
       </div>
@@ -140,15 +148,15 @@
               href="https://www.facebook.com/shivam.makwan"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a
-              target="_blank"
+            <!-- <a
               class="social-icon"
-              href="https://calendly.com/shivam-makwan"
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shivam-makwan/60min'});return false;"
               ><i class="fa fa-video"></i>
               <p>
                 <span class="tooltiptext">Schedule a call with me!</span>
               </p>
-            </a>
+            </a> -->
           </div>
         </div>
       </section>
@@ -493,9 +501,9 @@
           </p>
           <p class="mb-0">
             When forced indoors, I follow a number of sci-fi and fantasy genre
-            movies and television shows, I spend a
-            large amount of my free time exploring the latest technology
-            advancements in the full stack web development world.
+            movies and television shows, I spend a large amount of my free time
+            exploring the latest technology advancements in the full stack web
+            development world.
           </p>
         </div>
       </section>
@@ -572,5 +580,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/shivam-makwan/60min",
+          text: "Schedule time with me",
+          color: "#00a2ff",
+          textColor: "#ffffff",
+          branding: true,
+        });
+      };
+    </script>
+    <script>
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      const hexColor = "#" + randomColor.padEnd(6,'0');
+      document.documentElement.style.setProperty(
+        "--primary",
+        hexColor == "#ffffff" ? "#686868" : hexColor
+      );
+    </script>
   </body>
 </html>
