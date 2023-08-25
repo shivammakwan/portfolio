@@ -10693,5 +10693,11 @@ body:has(.switch__input:checked) {
 .dark__mode {
   margin: 20px;
   font-size: 24px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+label.switch {
+  cursor: pointer;
 }
 /* dark mode switch inspired by https://codepen.io/jkantner/pen/xxyMYKg */
