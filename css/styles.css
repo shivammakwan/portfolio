@@ -10701,3 +10701,7 @@ label.switch {
   cursor: pointer;
 }
 /* dark mode switch inspired by https://codepen.io/jkantner/pen/xxyMYKg */
+
+.text-invert {
+  text-shadow: 0 0 2px var(--primary), 0px 0px 2px var(--primary);;
+}
